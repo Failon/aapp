@@ -1,4 +1,11 @@
 <?php
+/*
+*	Install controller
+*
+*	@params: $params
+	@return: mInstall, vInstall
+*	@author: Toni
+*/
 	final class Install extends Controller{
 		
 		function __construct($params){
@@ -9,9 +16,10 @@
 			$this->view=new vInstall;
 		}
 		function home(){
-			
+			//home action
 		}
 		function create(){
+			//create action attempts to create the project database from the app.sql file data.
 			$dbname=$_POST['dbname'];
 			if ($this->model->create($dbname)){
 				//create file .deployed

@@ -1,16 +1,23 @@
 <?php
+/*
+*	class mHome model, for the home page.
+*
+*	@params: $params
+	@return: login
+*	@author: Amador
+*/
 	final class mHome extends Model{
-		
 		function __construct($params){
 			parent::__construct($params);
 			$this->db=DB::singleton();
-			// a litle prove in--->out
 			$this->data_out=$params;
 		}
-		function get_out(){
-			return $this->data_out;
-		}
+
 		function login($user,$password){
+			//login action
+			//@params $user, $password
+			//encripts $password to md5, if the user is set counts the match for the user and password combo, if its unique
+			//and the user is active, saves the SESSION DATA and returns TRUE, in any other case returns FALSE.
 			$password = md5($password);
 			if(isset($user)){
 				$retorno = TRUE;

@@ -1,4 +1,11 @@
 <?php
+/*
+*	class mReg for the subscription page.
+*
+*	@params: none
+	@return: register
+*	@author: Amador
+*/
 	class mReg extends Model{
 
 		function __construct(){
@@ -6,6 +13,11 @@
 		}
 		
 		function register($name, $password, $email, $city){
+			//register action
+			//attempts to register the user in the system with the information given by parameters.
+			//Upon success returns 0.
+			//Upon database error returns -1
+			//If the city is not found on the ciudades table returns -2
 			$error = 0;//inserted successfully
 			$name = strtolower($name);
 			$password = md5(strtolower($password));

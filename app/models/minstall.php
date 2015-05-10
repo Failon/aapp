@@ -1,4 +1,11 @@
 <?php
+/*
+*	class mInstal model to install the database of the application based on the app.sql syntax.
+*
+*	@params: $params
+	@return: create
+*	@author: Toni
+*/
 	class mInstall extends Model{
 		protected $conf;
 
@@ -13,6 +20,7 @@
 			return $this->data_out;
 		}
 		function create($dbname){
+			//creates the database with the conf dbname and executes the querys on app.sql.
 			$dbhost = $this->conf->dbhost;
 			$dbuser = $this->conf->dbuser;
 			$dbpass = $this->conf->dbpass;
@@ -35,7 +43,7 @@
 			$conn=null;
 			//now connecting with new DSN
 			$dsn=$this->conf->driver.':host=' . $dbhost.';dbname='.$dbname;
-			Coder::code($dsn);
+			// Coder::code($dsn);
 			try{
 				$conn=new PDO($dsn,$dbuser,$dbpass);
 			}catch(PDOException $e){
@@ -46,7 +54,7 @@
 			$sqlList=SQLParser::parse($query);
 
 			
-			Coder::code_var($sqlList);
+			// Coder::code_var($sqlList);
     		try {
     			foreach ($sqlList as $sqlline)
 				{

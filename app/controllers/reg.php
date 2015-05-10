@@ -1,4 +1,11 @@
 <?php
+/*
+*	class reg controller to control the suscription page.
+*
+*	@params: none
+	@return: mReg, vReg
+*	@author: Amador
+*/
 	class Reg extends Controller{
 		
 		function __construct(){
@@ -8,10 +15,14 @@
 			$this->view=new vReg;
 		}
 		function home(){
-			//echo "Pagina generadada en ".(microtime() - $this->conf->time)." segundos";
+			//home action
 		}
 
 		function send(){
+			//send action
+			//verify if all required inputs were filled on the form and controlls if password and repassword match.
+			//if verified, call upon the model register action and passes the data retrieved by POST to it.
+			//on success display the success message, on failure displays the error message.
 			if(isset($_POST['name'], $_POST['password'], $_POST['repassword'], $_POST['email'], $_POST['city'])){
 				if($_POST['password'] === $_POST['repassword']){
 					$insert_user = $this->model->register($_POST['name'], $_POST['password'], $_POST['email'], $_POST['city']);

@@ -7,7 +7,9 @@
             </div>
           </div>
               <div class="regist">
-              <?php if(!isset($_SESSION['usuario'])){
+              <?php
+              //if the session is not set displays the login form.
+              if(!isset($_SESSION['usuario'])){
                 $button = 'Entrar';
                 $route = APP_W.'home/login';
               ?>
@@ -17,7 +19,9 @@
                     <input type="submit" class="bEntra" value="<?= $button ?>" id="logsend">
                 </form>
                 <p>or click <a href="<?=APP_W;?>reg">here</a> to register with our site</p>
-              <?php }else{
+              <?php
+              //if the session is set, displays the welcome form.
+               }else{
                 $button = 'Sortir';
                 $route = APP_W.'home/logout';
               ?>
@@ -27,7 +31,8 @@
                 </form>
                 
                 <label for="profile">Update your Profile<a href="<?=APP_W;?>profile"><img id="profile_update" src="<?=APP_W;?>pub/theme/k/img/profile.png" alt="profile_update"></a></label>
-               <?php 
+               <?php
+               //if the sessions is set and the user role is admin displays the admin control panel
                if($_SESSION['admin']==1){
                ?>
                <label for="admincp">admin cp<a href="<?=APP_W;?>admin"><img src="<?=APP_W;?>pub/theme/k/img/admin.png" alt="admincp"></a></label>

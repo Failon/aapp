@@ -1,5 +1,11 @@
 <?php
-
+/*
+*	profile controller for the profile control pannel for the application users.
+*
+*	@params: $params
+	@return: mProfile vProfile
+*	@author: Amador
+*/
 	final class profile extends controller{
 		function __construct($params){
 			parent::__construct($params);
@@ -8,9 +14,12 @@
 			$this->view=new vProfile;
 		}
 		function home(){
-
+			//home action
 		}
 		function update(){
+			//update action
+			//calls upon the the model update action and passes the form data retrieved by POST to it.
+			//On success launches home controller, on failure displays the error message.
 			$data = array();
 			if(isset($_POST['name'])&&$_POST['name']!="") $data['name'] = strtolower($_POST['name']);
 			if(isset($_POST['email'])&&$_POST['email']!="") $data['email'] = strtolower($_POST['email']);
@@ -29,12 +38,14 @@
 			}			
 		}
 		function password(){
-
+			//password action
+			//calls upon the model password action and passes the form data retrived by POST to it.
+			//On success launches home controller, on failure displays the error message.
 			if(md5($_POST['actual_password'])==$_SESSION['password']){
 				if($_POST['password'] == $_POST['repassword']){
 					$model = $this->model->password($_POST['password']);
 					if($model==0){
-						echo "password actualizada con exito";
+						header('Location:'.APP_W.'home');
 					}else{
 						echo "ha habido un error al actualizar la contraseña";
 					}
@@ -44,6 +55,9 @@
 			}
 		}
 		function cancel(){
+			//for non admin users
+			//calls upon the model password action and passes the form data retrived by POST to it.
+			//On success launches home/logout action, on failure displays the error message.			
 			if($_SESSION['admin']!= '1'){
 				$model = $this->model->cancel();
 				if($model==0){

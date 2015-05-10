@@ -1,0 +1,58 @@
+\hypertarget{create_8php}{}\section{app/tpl/create.php File Reference}
+\label{create_8php}\index{app/tpl/create.\+php@{app/tpl/create.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{create_8php_a8f120409eb9f635ac30b3f9a6d5becdc}{\$command} = \char`\"{}mysql -\/u \char`\"{}.\$dbuser.\char`\"{} -\/p \char`\"{}.\$dbpass.\char`\"{} -\/h \char`\"{}.\$dbhost.\char`\"{} -\/D \char`\"{}.\$dbname.\char`\"{} $<$ app.\+sql\char`\"{}
+\item 
+\hyperlink{create_8php_a49c7011be9c979d9174c52a8b83e5d8e}{\$config} = \hyperlink{classRegistry_af821839861bc43bc8a24f004be8534a7}{Registry\+::get\+Instance}()
+\item 
+\hyperlink{create_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn} = mysql\+\_\+connect(\$dbhost, \$dbuser, \$dbpass)
+\item 
+\hyperlink{create_8php_a580dd98ba7f04c133d1a1e1b01af4a30}{\$dbhost} = \$conf-\/$>$dbhost
+\item 
+\hyperlink{create_8php_a95e283b6dd5867f7b99c160bebf9826c}{\$dbpass} = \$conf-\/$>$dbpass
+\item 
+\hyperlink{create_8php_a8d5ac1c3396a540f025f9bbe56a5b568}{\$dbuser} = \$conf-\/$>$dbuser
+\item 
+\hyperlink{create_8php_a73004ce9cd673c1bfafd1dc351134797}{\$output} = shell\+\_\+exec(\$command . \textquotesingle{}/shellexec.\+sql\textquotesingle{})
+\item 
+\hyperlink{create_8php_ad78265bb473309fdfd2bc017c8cffe81}{\$retval} = mysql\+\_\+query( \$sql, \$conn )
+\item 
+\hyperlink{create_8php_a047170d6020a882807665812a27e2525}{\$sql} = \textquotesingle{}C\+R\+E\+A\+T\+E Database \textquotesingle{}.\$conf-\/$>$dbname
+\item 
+\hyperlink{create_8php_ac03413b0bbad0517a33ff8eb0e706f91}{if} (!\$conn)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{create_8php_a8f120409eb9f635ac30b3f9a6d5becdc}{}\index{create.\+php@{create.\+php}!\$command@{\$command}}
+\index{\$command@{\$command}!create.\+php@{create.\+php}}
+\subsubsection[{\$command}]{\setlength{\rightskip}{0pt plus 5cm}\$command = \char`\"{}mysql -\/u \char`\"{}.\$dbuser.\char`\"{} -\/p \char`\"{}.\$dbpass.\char`\"{} -\/h \char`\"{}.\$dbhost.\char`\"{} -\/D \char`\"{}.\$dbname.\char`\"{} $<$ app.\+sql\char`\"{}}\label{create_8php_a8f120409eb9f635ac30b3f9a6d5becdc}
+\hypertarget{create_8php_a49c7011be9c979d9174c52a8b83e5d8e}{}\index{create.\+php@{create.\+php}!\$config@{\$config}}
+\index{\$config@{\$config}!create.\+php@{create.\+php}}
+\subsubsection[{\$config}]{\setlength{\rightskip}{0pt plus 5cm}\$config = {\bf Registry\+::get\+Instance}()}\label{create_8php_a49c7011be9c979d9174c52a8b83e5d8e}
+\hypertarget{create_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{}\index{create.\+php@{create.\+php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!create.\+php@{create.\+php}}
+\subsubsection[{\$conn}]{\setlength{\rightskip}{0pt plus 5cm}\$conn = mysql\+\_\+connect(\$dbhost, \$dbuser, \$dbpass)}\label{create_8php_aa8a5a87b9c1a6a0819b88447cbe41877}
+\hypertarget{create_8php_a580dd98ba7f04c133d1a1e1b01af4a30}{}\index{create.\+php@{create.\+php}!\$dbhost@{\$dbhost}}
+\index{\$dbhost@{\$dbhost}!create.\+php@{create.\+php}}
+\subsubsection[{\$dbhost}]{\setlength{\rightskip}{0pt plus 5cm}\$dbhost = \$conf-\/$>$dbhost}\label{create_8php_a580dd98ba7f04c133d1a1e1b01af4a30}
+\hypertarget{create_8php_a95e283b6dd5867f7b99c160bebf9826c}{}\index{create.\+php@{create.\+php}!\$dbpass@{\$dbpass}}
+\index{\$dbpass@{\$dbpass}!create.\+php@{create.\+php}}
+\subsubsection[{\$dbpass}]{\setlength{\rightskip}{0pt plus 5cm}\$dbpass = \$conf-\/$>$dbpass}\label{create_8php_a95e283b6dd5867f7b99c160bebf9826c}
+\hypertarget{create_8php_a8d5ac1c3396a540f025f9bbe56a5b568}{}\index{create.\+php@{create.\+php}!\$dbuser@{\$dbuser}}
+\index{\$dbuser@{\$dbuser}!create.\+php@{create.\+php}}
+\subsubsection[{\$dbuser}]{\setlength{\rightskip}{0pt plus 5cm}\$dbuser = \$conf-\/$>$dbuser}\label{create_8php_a8d5ac1c3396a540f025f9bbe56a5b568}
+\hypertarget{create_8php_a73004ce9cd673c1bfafd1dc351134797}{}\index{create.\+php@{create.\+php}!\$output@{\$output}}
+\index{\$output@{\$output}!create.\+php@{create.\+php}}
+\subsubsection[{\$output}]{\setlength{\rightskip}{0pt plus 5cm}\$output = shell\+\_\+exec(\$command . \textquotesingle{}/shellexec.\+sql\textquotesingle{})}\label{create_8php_a73004ce9cd673c1bfafd1dc351134797}
+\hypertarget{create_8php_ad78265bb473309fdfd2bc017c8cffe81}{}\index{create.\+php@{create.\+php}!\$retval@{\$retval}}
+\index{\$retval@{\$retval}!create.\+php@{create.\+php}}
+\subsubsection[{\$retval}]{\setlength{\rightskip}{0pt plus 5cm}\$retval = mysql\+\_\+query( \$sql, \$conn )}\label{create_8php_ad78265bb473309fdfd2bc017c8cffe81}
+\hypertarget{create_8php_a047170d6020a882807665812a27e2525}{}\index{create.\+php@{create.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!create.\+php@{create.\+php}}
+\subsubsection[{\$sql}]{\setlength{\rightskip}{0pt plus 5cm}\$sql = \textquotesingle{}C\+R\+E\+A\+T\+E Database \textquotesingle{}.\$conf-\/$>$dbname}\label{create_8php_a047170d6020a882807665812a27e2525}
+\hypertarget{create_8php_ac03413b0bbad0517a33ff8eb0e706f91}{}\index{create.\+php@{create.\+php}!if@{if}}
+\index{if@{if}!create.\+php@{create.\+php}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if}\label{create_8php_ac03413b0bbad0517a33ff8eb0e706f91}

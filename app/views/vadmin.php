@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class vAdmin view for the admin control panel.
 *
 *	@params: $contents, $data

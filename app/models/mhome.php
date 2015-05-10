@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class mHome model, for the home page.
 *
 *	@params: $params

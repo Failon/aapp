@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class admin controller, controls the admin control panel actions for the admin role users.
 *
 *	@params: user/id

@@ -15,3 +15,6 @@ document \hyperlink{maps_8js_a5fc4c57f40f840ee2a6b97e1c3e484fe}{ready} (function
 \item[{function()\{var loc=\{\};function showlocation(position)\{loc.\+lat=position.\+coords.\+latitude;loc.\+lng=position.\+coords.\+longitude;map=new {\bf G\+Maps}(\{div\+: \textquotesingle{}\#mapa\textquotesingle{}, lat\+:loc.\+lat, lng\+:loc.\+lng,\});{\bf map.\+add\+Marker}(\{div\+: \textquotesingle{}\#mapa\textquotesingle{}, lat\+:loc.\+lat, lng\+:loc.\+lng, title\+:\char`\"{}A\+Framework\char`\"{}, info\+Window\+:\{content\+:\char`\"{}A\+Framework\char`\"{}\}\});\}if(navigator.\+geolocation)\{navigator.\+geolocation.\+get\+Current\+Position(showlocation);\}\}}]{}
 \end{DoxyParamCaption}
 )}\label{maps_8js_a5fc4c57f40f840ee2a6b97e1c3e484fe}
+function initialize() \{ var loc = \{\}; var geocoder = new google.\+maps.\+Geocoder(); if(google.\+loader.\+Client\+Location) \{ loc.\+lat = google.\+loader.\+Client\+Location.\+latitude; loc.\+lng = google.\+loader.\+Client\+Location.\+longitude;
+
+var latlng = new google.\+maps.\+Lat\+Lng(loc.\+lat, loc.\+lng); geocoder.\+geocode(\{\textquotesingle{}lat\+Lng\textquotesingle{}\+: latlng\}, function(results, status) \{ if(status == google.\+maps.\+Geocoder\+Status.\+O\+K) \{ alert(results\mbox{[}0\mbox{]}\mbox{[}\textquotesingle{}formatted\+\_\+address\textquotesingle{}\mbox{]}); \}; \}); \} \} 

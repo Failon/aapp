@@ -72,7 +72,7 @@
      class SQLParser{
         
         static function outComments($query){
-            $sqlComments = '@(([\'"]).*?[^\\\]\2)|((?:\#|--).*?$|/\*(?:[^/*]|/(?!\*)|\*(?!/)|(?R))*\*\/)\s*|(?<=;)\s+@ms';
+            $sqlComments = '@(([\'"]).*?[^\\\]\2)|((?:\#|--).*?$|/\*(?:[^/**]|/(?!\*)|\*(?!/)|(?R))*\*\/)\s*|(?<=;)\s+@ms';
             $query = trim( preg_replace( $sqlComments, '$1', $query ) );
         
         //Eventually remove the last ;

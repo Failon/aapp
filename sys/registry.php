@@ -2,7 +2,7 @@
 
 
 
-/**
+/***
  *  Description of Registry
  *  Registry de les configuracions
  *  @author toni
@@ -45,7 +45,7 @@ class Registry {
     public function getData(){
         return $this->data;
     }
-    /**
+    /***
      *  This function initializes and load
      *  config information  app, located in Config.json
      */

@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class mReg for the subscription page.
 *
 *	@params: none

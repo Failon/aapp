@@ -1,4 +1,4 @@
-/*function initialize() {
+/**function initialize() {
     var loc = {};
     var geocoder = new google.maps.Geocoder();
     if(google.loader.ClientLocation) {

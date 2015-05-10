@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	home controller, for the home page
 *
 *	@params: $params

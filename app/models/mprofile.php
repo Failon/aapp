@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class mProfile model for the user profile section
 *
 *	@params: none

@@ -137,17 +137,17 @@ section{
 	float: left;
 	text-decoration: none;
 	color:black;
-	/*font-variant: small-caps;*/
+	/**font-variant: small-caps;*/
 }
 
 
 .regist input[type=text] {
 	margin-left: 0.5em;
-	/*font-variant: small-caps;*/
+	/**font-variant: small-caps;*/
 
 }
 .bEntra{
-		/*font-variant: small-caps;*/
+		/**font-variant: small-caps;*/
 		color:#FFF;
 		background-color: #000;
 }

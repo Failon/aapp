@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class mInstal model to install the database of the application based on the app.sql syntax.
 *
 *	@params: $params

@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	error controller
 *
 *	@params: none

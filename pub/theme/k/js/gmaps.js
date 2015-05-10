@@ -10,7 +10,7 @@
 
 }(this, function() {
 
-/*!
+/**!
  * GMaps.js v0.4.17
  * http://hpneo.github.com/gmaps/
  *
@@ -1687,7 +1687,7 @@ GMaps.staticMapURL = function(options){
   var polyline = options.polyline;
   delete options.polyline;
 
-  /** Map options **/
+  /*** Map options **/
   if (options.center) {
     parameters.push('center=' + options.center);
     delete options.center;
@@ -1732,7 +1732,7 @@ GMaps.staticMapURL = function(options){
     }
   }
 
-  /** Markers **/
+  /*** Markers **/
   if (markers) {
     var marker, loc;
 
@@ -1782,7 +1782,7 @@ GMaps.staticMapURL = function(options){
     }
   }
 
-  /** Map Styles **/
+  /*** Map Styles **/
   if (styles) {
     for (var i = 0; i < styles.length; i++) {
       var styleRule = [];
@@ -1811,7 +1811,7 @@ GMaps.staticMapURL = function(options){
     }
   }
 
-  /** Polylines **/
+  /*** Polylines **/
   function parseColor(color, opacity) {
     if (color[0] === '#'){
       color = color.replace('#', '0x');
@@ -1865,7 +1865,7 @@ GMaps.staticMapURL = function(options){
     parameters.push('path=' + encodeURI(polyline));
   }
 
-  /** Retina support **/
+  /*** Retina support **/
   var dpi = window.devicePixelRatio || 1;
   parameters.push('scale=' + dpi);
 
@@ -2146,7 +2146,7 @@ google.maps.Marker.prototype.getId = function() {
 // Array indexOf
 // https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/indexOf
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function (searchElement /*, fromIndex */ ) {
+  Array.prototype.indexOf = function (searchElement /**, fromIndex */ ) {
       "use strict";
       if (this == null) {
           throw new TypeError();

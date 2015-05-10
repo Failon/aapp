@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	profile controller for the profile control pannel for the application users.
 *
 *	@params: $params

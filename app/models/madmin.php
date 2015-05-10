@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class mAdmin model for the Admin control panel.
 *
 *	@params: $params

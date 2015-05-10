@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	class reg controller to control the suscription page.
 *
 *	@params: none

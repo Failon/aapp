@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *	Install controller
 *
 *	@params: $params

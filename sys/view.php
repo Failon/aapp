@@ -1,5 +1,5 @@
 <?php
-	/**
+	/***
 	 *  class View
 	 * 	access to registry and loads
 	 *  the corresponding template

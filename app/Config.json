@@ -1,0 +1,16 @@
+{
+    "driver":"mysql",
+    "dbname":"amadorapp",
+    "dbhost":"localhost",
+    "dbuser":"root",
+    "dbpass":"",
+    "app_data":{
+        "css":"css/app.css",
+        "js":"js/application.js",
+        "titol":"Framework",
+        "logo":"img/AFramework.png",
+        "apli":"KMan",
+        "theme":"pub/themes/k/",
+        "app_w":""
+    }
+}
